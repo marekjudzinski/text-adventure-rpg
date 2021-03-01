@@ -47,9 +47,34 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  font-family: "DotGothic16", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box; }
+
 .container {
-  font-family: "DotGothic16", sans-serif; }
+  background-image: url("images/barn.jpg");
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px; }
   .container .text {
-    font-family: "DotGothic16", sans-serif; }
-  .container .btn {
-    font-family: "DotGothic16", sans-serif; }
+    text-align: center; }
+  .container .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px; }
+    .container .btn-grid .btn {
+      background-color: #00aaff;
+      border: 1px solid #006699;
+      border-radius: 5px;
+      padding: 5px 10px;
+      color: white;
+      outline: none; }
