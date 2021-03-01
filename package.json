@@ -1,0 +1,24 @@
+{
+  "name": "text-adventure-rpg",
+  "version": "1.0.0",
+  "description": "A simple, text-based RPG game. Be careful which path you choose...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marekjudzinski/text-adventure-rpg.git"
+  },
+  "author": "Marek Judziński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marekjudzinski/text-adventure-rpg/issues"
+  },
+  "homepage": "https://github.com/marekjudzinski/text-adventure-rpg#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
