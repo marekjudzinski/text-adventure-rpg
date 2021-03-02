@@ -49,6 +49,7 @@ table {
 
 body {
   font-family: "DotGothic16", sans-serif;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +58,7 @@ body {
   box-sizing: border-box; }
 
 .container {
-  width: 800px;
+  width: 700px;
   max-width: 80%;
   background-color: white;
   padding: 10px;
@@ -71,6 +72,8 @@ body {
     gap: 10px;
     margin-top: 20px; }
     .container .btn-grid .btn {
+      font-family: "DotGothic16", sans-serif;
+      font-size: 20px;
       background-color: #00aaff;
       border: 1px solid #006699;
       border-radius: 5px;
@@ -78,4 +81,4 @@ body {
       color: white;
       outline: none; }
     .container .btn-grid .btn:hover {
-      border-color: black; }
+      border: 3px solid black; }
