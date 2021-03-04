@@ -27,7 +27,7 @@ function showTextNode(textNodeIndex) {
         }
     })
 }
-//funckja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
+// //funckja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
 function showOption(option) {
     return true
 }
@@ -44,57 +44,105 @@ const nextTextNodeId = option.nextText
 const textNodes = [
     {
         id: 1,
-        text: 'Wlasnie sie obudziles. Po wczorajszej wizycie w burdelu oprocz bolu glowy, kurewsko boli cie dupa... Cos ewidentnie poszlo nie tak...',
+        text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Nagrod bedzie kilka, lecz bedziesz mogl wybrac tylko jedna...',
         options:[
             {
-                text: 'Wroc do domu uciech cielesnych',
+                text: 'ZEJDZ DO PODZIEMI',
                 nextText: 2
-            },
-            {
-                text: 'DAB!',
-                nextText: 3
             }
         ]
     },
     {
         id: 2,
-        text: 'Po drodze masz czas na refleksje. Twoje zycie jest nudne i smutne, w domu nigdy sie nie przelewalo, ojciec bil matke, gdy tylko konczyla sie wodka, ale czare goryczy przelewa fakt, ze caly czas boli cie glowa... Ale czemu boli cie dupa...?',
+        text: 'Zszedles na sam dol. Jest zbyt ciemno dla ludzkiego oka. Masz cztery opcje',
         options: [
             {
-                text: 'kontynuuj glebokie przemyslenia...',
+                text: 'WYPIJ MIKSTURE POPRAWIAJACA WZROK',
+                nextText: 3
+            },
+            {
+                text: 'WYPIJ MIKSTURE POPRAWIAJACA SLUCH',
                 nextText: 4
-            }
-        ]
-    },
-    {
-        id: 3,
-        text: 'Umarles i obys nigdy nie powstal z martwych... kto jeszcze dabuje w 2021?',
-        options: [
+            },
             {
-                text: 'RESTART THE GAME',
-                nextText: -1
-            }
-        ]
-    },
-    {
-        id:4,
-        text: 'Mieszkasz na wsi. Jest to o tyle dobre, ze masz blisko do kosciola... ale do burdelu musisz isc az do miasta. Zauwazasz, ze skonczyla ci sie gotowka... czy ostatniej nocy miales za co zaplacic?',
-        options: [
-            {
-                //tu ma sie zaczac zabawa
-                text: 'idz dalej sciezka',
+                text: 'ZAPAL POCHODNIE',
                 nextText: 5
             },
             {
-                //a tu pieklo...
-                text: 'idz skrotem przez las',
+                text: 'IDZ NA OSLEP',
                 nextText: 6
             }
         ]
     },
     {
-        id: 5,
-        text: ''
+        id: 3,
+        text: 'Dzieki miksturze udalo ci sie uniknac ataku z zaskoczenia. Potwor czail sie w ciemnosci, ale udalo ci sie go dostrzec.',
+        options: [
+            {
+                text: 'WALCZ',
+                nextText: 7
+            },
+            {
+                text: 'OBRAZ JEGO MATKE',
+                nextText: 8
+            }
+        ]
+    },
+    {
+        id: 7,
+        text: 'Twoj przeciwnik byl sprytny i zwinny, walka trwala dluzsza chwile. Koniec koncow bez wiekszych obrazen pokonujesz bestie.',
+        options: [
+            {
+                text: 'RUSZAJ DALEJ',
+                nextText: 9
+            },
+            {
+                text: 'WYPATROSZ BESTIE',
+                nextText: 10
+            }
+        ]
+    },
+    {
+        id: 9,
+        text: 'Efekty mikstury zaczynaja slabnac i odczuwasz efekty uboczne. Przystanales na chwile aby zlapac oddech. Wilgoc sciany troche cie ocucila, masz sile by ruszyc dalej. Po chwili docierasz do drzwi.',
+        options: [
+            {
+                text: 'WYPIJ PONOWNIE MIKSTURE POPRAWIAJACA WZROK',
+                nextText: 11
+            },
+            {
+                text: 'OTWORZ DRZWI',
+                nextText: 12
+            }
+        ]
+    },
+    {
+        id: 11,
+        text: 'Trafiles do sali pelnej skrzacych sie witrazy, zapalonych swiec i zyrandoli... Przez miksture jestes doslownie oslepiony. Zauwazyles zaledwie kontury zblizajacego sie do ciebie stwora...',
+        options: [
+            {
+                text: 'GAME OVER',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 12,
+        text: 'Trafiles do sali pelnej skrzacych sie witrazy, zapalonych swiec i zyrandoli... Zauwazasz siedzaca przy oltarzu oblesna, gruba postac. Ta rowniez cie zauwaza i mimo swoich gabarytow wykonuje w twoim kierunku skok... Masz wrazenie, ze uslyszales komentarz na temat swojej matki...',
+        options: [
+            {
+                text: 'WALCZ',
+                nextText: 13
+            },
+            {
+                text: 'COS TY POWIEDZIAL O MOJEJ MATCE?!',
+                nextText: 14
+            }
+        ]
+    },
+    {
+        id: 13,
+        text: 'Udalo ci sie wykonac unik, ale potwor trafil cie w okolice biodra. Nie pozostajac dluznym szybko sieczesz go mieczem w brzuch. Wnetrznosci zaczynaja wyplywac na podloge... ale po chwili wracaja z powrotem do brzucha bestii. Wiesz juz zeby celowac w gg '
     }
 ]
 
