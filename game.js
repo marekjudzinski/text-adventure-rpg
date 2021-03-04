@@ -27,7 +27,7 @@ function showTextNode(textNodeIndex) {
         }
     })
 }
-// //funckja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
+//funkcja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
 function showOption(option) {
     return true
 }
@@ -103,6 +103,16 @@ const textNodes = [
         ]
     },
     {
+        id: 8,
+        text: 'No... Troche przesadziles... Bestia spojrzala na ciebie z obrzydzeniem, splunela ci pod nogi i poszla w druga strone... Mam nadzieje ze jestes z siebie dumny.',
+        options: [
+            {
+                text: 'RUSZAJ DALEJ',
+                nextText: 9
+            }
+        ]
+    },
+    {
         id: 9,
         text: 'Efekty mikstury zaczynaja slabnac i odczuwasz efekty uboczne. Przystanales na chwile aby zlapac oddech. Wilgoc sciany troche cie ocucila, masz sile by ruszyc dalej. Po chwili docierasz do drzwi.',
         options: [
@@ -115,6 +125,16 @@ const textNodes = [
                 nextText: 12
             }
         ]
+    },
+    {
+      id: 10,
+      text: 'Cholera! Z ciała bestii zaczal sie unosic zielony opar, ktory powoli zaczyna cie dusic...',
+      options: [
+          {
+              text: 'GAME OVER',
+              nextText: -1
+          }
+      ]
     },
     {
         id: 11,
@@ -151,6 +171,16 @@ const textNodes = [
             {
                 text: 'PRZEPROS...',
                 nextText: 16
+            }
+        ]
+    },
+    {
+        id: 14,
+        text: 'Z moca tysiaca slonc, odrabales potworowi leb! Niczym furiat przygladales sie stygnacym zwlokom czegos, co moglo troche przypominac jakiegos kaplana... Ruszasz do drzwi na koncu sali.',
+        options: [
+            {
+                text: 'RUSZAJ DALEJ',
+                nextText: 17
             }
         ]
     },
