@@ -12,13 +12,13 @@ function startGame() {
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode =>
         textNode.id === textNodeIndex)
-        textElement.innerText = textNode.text
-        while (optionButtonsElement.firstChild){
-            optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+    textElement.innerText = textNode.text
+    while (optionButtonsElement.firstChild) {
+        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
 
     textNode.options.forEach(option => {
-        if (showOption(option)){
+        if (showOption(option)) {
             const button = document.createElement('button')
             button.innerText = option.text
             button.classList.add('btn')
@@ -27,14 +27,15 @@ function showTextNode(textNodeIndex) {
         }
     })
 }
+
 //funkcja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
 function showOption(option) {
     return true
 }
 
 function selectOption(option) {
-const nextTextNodeId = option.nextText
-    if (nextTextNodeId <= 0){
+    const nextTextNodeId = option.nextText
+    if (nextTextNodeId <= 0) {
         return startGame()
     }
     showTextNode(nextTextNodeId)
@@ -45,7 +46,7 @@ const textNodes = [
     {
         id: 1,
         text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Nagrod bedzie kilka, lecz bedziesz mogl wybrac tylko jedna...',
-        options:[
+        options: [
             {
                 text: 'ZEJDZ DO PODZIEMI',
                 nextText: 2
@@ -89,6 +90,30 @@ const textNodes = [
         ]
     },
     {
+        id: 5,
+        text: 'Trzymajac pochodnie w jednej rece zauwazasz potwora. Wyciagasz miecz ale ciezko jest ci walczyc z pochodnia w rece',
+        options: [
+            {
+                text: 'WALCZ Z POCHODNIA W RECE',
+                nextText: 34
+            },
+            {
+                text: 'WYRZUC POCHODNIE',
+                nextText: 35
+            }
+        ]
+    },
+    {
+        id: 6,
+        text: 'Coz... Idziesz trzymajac sie reka sciany a potwor z latwoscia dopadl cie juz po kilku krokach.',
+        options: [
+            {
+                text: 'GAME OVER',
+                nextText: -1
+            }
+        ]
+    },
+    {
         id: 7,
         text: 'Twoj przeciwnik byl sprytny i zwinny, walka trwala dluzsza chwile. Koniec koncow bez wiekszych obrazen pokonujesz bestie.',
         options: [
@@ -127,14 +152,14 @@ const textNodes = [
         ]
     },
     {
-      id: 10,
-      text: 'Cholera! Z ciała bestii zaczal sie unosic zielony opar, ktory powoli zaczyna cie dusic...',
-      options: [
-          {
-              text: 'GAME OVER',
-              nextText: -1
-          }
-      ]
+        id: 10,
+        text: 'Cholera! Z ciała bestii zaczal sie unosic zielony opar, ktory powoli zaczyna cie dusic...',
+        options: [
+            {
+                text: 'GAME OVER',
+                nextText: -1
+            }
+        ]
     },
     {
         id: 11,
@@ -275,19 +300,19 @@ const textNodes = [
         text: 'Smok opowiedzial pierwsza zagadke: Zawsze przyjdzie, ale nigdy nie przyjdzie dzisiaj. Co to takiego?',
         options: [
             {
-                text:'NIDGY',
+                text: 'NIDGY',
                 nextText: 23,
             },
             {
-                text:'DZISIAJ',
+                text: 'DZISIAJ',
                 nextText: 23,
             },
             {
-                text:'WCZORAJ',
+                text: 'WCZORAJ',
                 nextText: 23,
             },
             {
-                text:'JUTRO',
+                text: 'JUTRO',
                 nextText: 24
             }
         ]
@@ -307,7 +332,7 @@ const textNodes = [
         text: 'Z powaga godna powaznego smoka, smok odpowiedzial: Tak, to poprawna odpowiedz. Czas na druga zagadke: Czy gęś może nazwać się ptakiem?',
         options: [
             {
-                text:'TAK',
+                text: 'TAK',
                 nextText: 25
             },
             {
@@ -412,6 +437,26 @@ const textNodes = [
         options: [
             {
                 text: 'THE END',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 34,
+        text: 'Masz problemy z utrzymaniem rownowagi, ale przez chwile dotrzymujesz tempa potworowi... Przez chwile...',
+        options: [
+            {
+                text: 'GAME OVER',
+                nextText: -1
+            },
+        ]
+    },
+    {
+        id: 35,
+        text: 'Nie wiem czego sie spodziwales. W chwili gdy wyrzucasz pochodnie potwor wycofuje sie w ciemnosc. Stoisz przy pochodni z mieczem w rece i nerwowo obracasz sie w kazda strone. Nie mija chwila i czujesz jak szpony wbijaja ci sie w plecy...',
+        options: [
+            {
+                text: 'GAME OVER',
                 nextText: -1
             }
         ]
