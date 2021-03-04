@@ -45,7 +45,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Nagrod bedzie kilka, lecz bedziesz mogl wybrac tylko jedna...',
+        text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Krol obiecal jedna z kilku nagrod...',
         options: [
             {
                 text: 'ZEJDZ DO PODZIEMI',
@@ -457,6 +457,102 @@ const textNodes = [
         options: [
             {
                 text: 'GAME OVER',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 4,
+        text: 'Mimo glebokich ciemnosci udaje ci sie uslyszec potwora. Wykonales akrobatyczny unik i namierzyles przeciwnika. Slyszysz jak rozjuszona bestia ponawia atak. Ponownie odskoczyles i kontratakowales wroga istote. Uslyszales gluche stekniecie i dzwiek opadajacego na podloge ciala. Dzieki miksturze udalo ci sie uslszec cos jeszcze... Podchodzisz do miejsca, z ktorego zaatakowala bestia, kucasz i ponownie slyszysz skrzypniecie luznych desek...',
+        options: [
+            {
+                text: 'ZOSTAW DESKI W SPOKOJU',
+                nextText: 36
+            },
+            {
+                text: 'SPROBUJ PODNIESC DESKI',
+                nextText: 37
+            }
+        ]
+    },
+    {
+        id: 36,
+        text: 'Dzialanie mikstury powoli slabnie - ty tez zaczynasz slabnac. Nie dosc, ze nic nie widzisz to powoli tez przestajesz slyszec... W koncu docierasz do drzwi. Moze czas aby uzyc mikstury poprawiajacej widzenie w ciemnosci?',
+        options: [
+            {
+                text: 'WYPIJ MIKSTURE POPRAWIAJACA WZROK',
+                nextText: 11
+            },
+            {
+                text: 'OTWORZ DRZWI',
+                nextText: 12
+            }
+        ]
+    },
+    {
+        id: 37,
+        text: 'Ciekawe... Znalazles ukryte schody. Prowadza jeszcze glebiej w dol podziemi. Tym razem nadszedl czas na miksture poprawiajaca wzrok. Widzisz, ze schody zdaja sie nie miec konca, jakby prowadzily do samego piekla... Po dlugiej podrozy w dol docierasz do wielkiego pomieszczenia. Widzisz... Ogromne probowki? W srodku znajduja sie ciala... Dzieki dzialaniu mikstury slysysz odlegle szepty. Ktos idzie w twoim kierunku.',
+        options: [
+            {
+                text: 'SZYBKO, UKRYJ SIE',
+                nextText: 38
+            },
+            {
+                text: 'STAW CZOLA ZBLIZAJACYM SIE POSTACIOM',
+                nextText: 39
+            }
+        ]
+    },
+    {
+        id: 39,
+        text: 'Trafiles na samego krola i jakiegos jegomoscia, ktorego wczesniej nie widziales na oczy. Twoja osoba wprawia dwojke w oslupienie. Podejrzany jegomosc pierwszy otrzasnal sie, pstryknal palcami i po chwili poczules ciezkie uderzenie w potylice. Tracisz przytomnosc...',
+        options: [
+            {
+                text: 'GAME OVER',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 38,
+        text: 'Bedac dobrze ukrytym, slyszysz rozmowe... krola z naukowcem? Wnioski plynace z rozmowy wprawiaja cie w oslupienie. Wszystkie ciala, ktore widzisz w probowkach naleza do mieszkancow krolestwa. Porwani sa poddawani licznym mutacjom i to oni stanowia zagrozenie czychajace w podziemiach...',
+        options: [
+            {
+                text: 'POCZEKAJ AZ DWOJKA PRZEJDZIE OBOK CIEBIE',
+                nextText: 40
+            },
+            {
+                text: 'WYJDZ NAPRZECIW DWOJCE',
+                nextText: 41
+            }
+        ]
+    },
+    {
+        id: 40,
+        text: 'Gdy jest juz bezpiecznie, udaje ci sie zlapac oddech... Kreci ci sie w glowie ale w koncu dochodzisz do siebie. Czas zrobic rozpierdol... Podchodzisz do kazdej probowki pokolei i rozwalasz je. Wiekszosc cial jest martwa, ale pare z nich zaczyna rozumiec co sie stalo. Sa wolni. I glodni zemnsty. Odsuwasz sie i pozwalasz mutantom pobiec za krolem i naukowcem.',
+        options: [
+            {
+                text: 'WROC NA GORE',
+                nextText: 42
+            }
+        ]
+    },
+    {
+        id: 42,
+        text: 'Nie uszedles daleko gdy zobaczyles cialo krola i naukowca... w nienajlepszym stanie. Mutanci zebrali sie nad nimi lecz gdy zdali sobie sprawe z twojej obecnosci, odwrocili sie i zdaje sie, czekali na twoje rozkazy. To byl twoj czas. Zdjales ubranie z krola, zalozyles je i w eskorcie mutantow oglosiles sie nowym, sprawiedliwym wladca!',
+        options: [
+            {
+                text: 'THE END',
+                nextText: -1
+            }
+        ]
+    },
+    {
+        id: 41,
+        text: 'Twoja osoba wprawia dwojke w oslupienie. Podejrzany jegomosc pierwszy otrzasnal sie, pstryknal palcami i po chwili poczules ciezkie uderzenie w potylice. Tracisz przytomnosc...',
+        options: [
+            {
+                text: 'THE END',
                 nextText: -1
             }
         ]
