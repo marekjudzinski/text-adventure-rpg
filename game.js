@@ -1,17 +1,17 @@
-const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('option-buttons')
-
+const textElement = document.getElementById('text');
+const optionButtonsElement = document.getElementById('option-buttons');
+const bodyBackground = document.getElementById('body');
+let currentId = 1;
 
 //silnik gry.
 function startGame() {
-    showTextNode(1)
+    showTextNode(currentId);
 }
 
 //funkcja, dzieki ktorej bedziemy widziec aktualny czesc naszej przygody wyswietlanej w formie sciany tekstu
 //argumentem jest index, czyli etam naszej podrozy
 function showTextNode(textNodeIndex) {
-    const textNode = textNodes.find(textNode =>
-        textNode.id === textNodeIndex)
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
@@ -28,6 +28,10 @@ function showTextNode(textNodeIndex) {
     })
 }
 
+// function setBackgroundImage(image){
+//
+// }
+
 //funkcja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
 function showOption(option) {
     return true
@@ -38,13 +42,17 @@ function selectOption(option) {
     if (nextTextNodeId <= 0) {
         return startGame()
     }
-    showTextNode(nextTextNodeId)
+    showTextNode(nextTextNodeId);
+    if((textNodes.find(textNode => textNode.id === currentId) !== undefined)) {
+        bodyBackground.style.backgroundImage = `url(${textNodes.find(textNode => textNode.id === currentId).backgroundImage})`;
+    }
 }
 
 //ELEMENTY NASZEJ PRZYGODY
 const textNodes = [
     {
         id: 1,
+        backgroundImage: "./images/barn.jpg",
         text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Krol obiecal jedna z kilku nagrod...',
         options: [
             {
@@ -55,6 +63,7 @@ const textNodes = [
     },
     {
         id: 2,
+        backgroundImage: "./images/barn2.jpg",
         text: 'Zszedles na sam dol. Jest zbyt ciemno dla ludzkiego oka. Masz cztery opcje',
         options: [
             {
@@ -77,6 +86,7 @@ const textNodes = [
     },
     {
         id: 3,
+        backgroundImage: ""
         text: 'Dzieki miksturze udalo ci sie uniknac ataku z zaskoczenia. Potwor czail sie w ciemnosci, ale udalo ci sie go dostrzec.',
         options: [
             {
@@ -558,5 +568,6 @@ const textNodes = [
         ]
     }
 ]
+
 
 startGame()
