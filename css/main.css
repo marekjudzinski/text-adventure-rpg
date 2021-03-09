@@ -48,24 +48,27 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: "Shippori Mincho B1", serif;
-  font-size: 32px;
+  background-image: url("../images/castle.jpg");
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
-  background-image: url("../images/barn2.jpg"); }
+  box-sizing: border-box; }
 
 .container {
   width: 700px;
   max-width: 80%;
-  background-color: #e6cda5;
+  background-color: #644b24;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px; }
   .container .text {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center; }
   .container .btn-grid {
     display: grid;
@@ -73,12 +76,12 @@ body {
     gap: 10px;
     margin-top: 20px; }
     .container .btn-grid .btn {
-      font-family: "Shippori Mincho B1", serif;
-      font-size: 32px;
-      background-color: #7a4e04;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 28px;
+      background-color: #cda260;
       border: 1px solid #006699;
       border-radius: 5px;
-      padding: 5px 10px;
+      padding: 10px 15px;
       color: white;
       outline: none; }
     .container .btn-grid .btn:hover {

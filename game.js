@@ -3,16 +3,17 @@ const optionButtonsElement = document.getElementById('option-buttons');
 const bodyBackground = document.getElementById('body');
 let currentId = 1;
 
-//silnik gry.
+
 function startGame() {
     showTextNode(currentId);
 }
 
-//funkcja, dzieki ktorej bedziemy widziec aktualny czesc naszej przygody wyswietlanej w formie sciany tekstu
-//argumentem jest index, czyli etam naszej podrozy
+
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+
     textElement.innerText = textNode.text
+
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -22,38 +23,30 @@ function showTextNode(textNodeIndex) {
             const button = document.createElement('button')
             button.innerText = option.text
             button.classList.add('btn')
+
             button.addEventListener('click', () => selectOption(option))
             optionButtonsElement.appendChild(button)
         }
     })
 }
 
-// function setBackgroundImage(image){
-//
-// }
-
-//funkcja, dzieki ktorej bedziemy widziec jakie opcje (w buttonach) mamy do wyboru
 function showOption(option) {
     return true
 }
 
 function selectOption(option) {
-    const nextTextNodeId = option.nextText
-    if (nextTextNodeId <= 0) {
+    const nextOptionId = option.nextText
+    if (nextOptionId <= 0) {
         return startGame()
     }
-    showTextNode(nextTextNodeId);
-    if((textNodes.find(textNode => textNode.id === currentId) !== undefined)) {
-        bodyBackground.style.backgroundImage = `url(${textNodes.find(textNode => textNode.id === currentId).backgroundImage})`;
-    }
+    showTextNode(nextOptionId);
 }
 
 //ELEMENTY NASZEJ PRZYGODY
 const textNodes = [
     {
         id: 1,
-        backgroundImage: "./images/barn.jpg",
-        text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Krol obiecal jedna z kilku nagrod...',
+        text: 'Jestes najemnikiem. Twoim zadaniem jest zejsc do podziemi zamku i stoczyc pojednki z czekajacymi tam na ciebie przeciwnikami. Krol obiecal jedna z wielu nagrod...',
         options: [
             {
                 text: 'ZEJDZ DO PODZIEMI',
@@ -63,7 +56,6 @@ const textNodes = [
     },
     {
         id: 2,
-        backgroundImage: "./images/barn2.jpg",
         text: 'Zszedles na sam dol. Jest zbyt ciemno dla ludzkiego oka. Masz cztery opcje',
         options: [
             {
@@ -86,7 +78,6 @@ const textNodes = [
     },
     {
         id: 3,
-        backgroundImage: ""
         text: 'Dzieki miksturze udalo ci sie uniknac ataku z zaskoczenia. Potwor czail sie w ciemnosci, ale udalo ci sie go dostrzec.',
         options: [
             {
@@ -539,7 +530,7 @@ const textNodes = [
     },
     {
         id: 40,
-        text: 'Gdy jest juz bezpiecznie, udaje ci sie zlapac oddech... Kreci ci sie w glowie ale w koncu dochodzisz do siebie. Czas zrobic rozpierdol... Podchodzisz do kazdej probowki pokolei i rozwalasz je. Wiekszosc cial jest martwa, ale pare z nich zaczyna rozumiec co sie stalo. Sa wolni. I glodni zemnsty. Odsuwasz sie i pozwalasz mutantom pobiec za krolem i naukowcem.',
+        text: 'Gdy jest juz bezpiecznie, udaje ci sie zlapac oddech... Kreci ci sie w glowie ale w koncu dochodzisz do siebie. Czas zrobic porzadek... Podchodzisz do kazdej probowki pokolei i rozwalasz je. Wiekszosc cial jest martwa, ale pare z nich zaczyna rozumiec co sie stalo. Sa wolni. I glodni zemsty. Odsuwasz sie i pozwalasz mutantom pobiec za krolem i naukowcem.',
         options: [
             {
                 text: 'WROC NA GORE',
@@ -570,4 +561,4 @@ const textNodes = [
 ]
 
 
-startGame()
+startGame();
